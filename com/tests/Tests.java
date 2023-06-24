@@ -1,15 +1,13 @@
 package com.tests;
 
 import filipowicz.library.LibraryManagementSystem;
-import filipowicz.book.Book;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.List;
-
+/**
+ * tests
+ */
 public class Tests {
 @Test
 public void testRemoveBookByTheTitle() {
