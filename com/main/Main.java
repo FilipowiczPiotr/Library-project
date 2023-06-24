@@ -2,7 +2,9 @@ package com.main;
 
 import filipowicz.library.LibraryManagementSystem;
 
-
+/**
+ * Main code presenting functionalities
+ */
 public class Main {
     public static void main(String[] args) {
         LibraryManagementSystem lms = new LibraryManagementSystem();

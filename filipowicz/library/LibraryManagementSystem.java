@@ -3,28 +3,46 @@ import filipowicz.book.Book;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Managing system of a library class
+ */
 public class LibraryManagementSystem {
-     Library library;
+     public Library library;
 
     public LibraryManagementSystem() {
         this.library = new Library();
     }
 
+    /**
+     * this method adds a book to the library
+     */
     public void addNewBook(String title, String author, int year) {
         Book newBook = new Book(title, author, year);
         library.addBook(newBook);
     }
 
-    public void removeBookByTitle(String title) {
+    public Library getLibrary() {
+        return library;
+    }
+
+    /**
+     * this method remove book by the title
+     */
+    public String removeBookByTitle(String title) {
         List<Book> books = library.getAllBooks();
         for (Book book : books) {
             if (book.getTitle().equals(title)) {
                 library.removeBook(book);
-                break;
+                return title;
             }
         }
+        return "0";
     }
 
+    /**
+     * this method shows us all books in the library
+     */
     public void displayAllBooks() {
         List<Book> books = library.getAllBooks();
         if (books.isEmpty()) {
@@ -35,6 +53,10 @@ public class LibraryManagementSystem {
             }
         }
     }
+
+    /**
+     * this method gets author and search all books in the library of this author
+     */
     public void searchBooksByAuthor(String author) {
         List<Book> books = library.getAllBooks();
         List<Book> matchingBooks = new ArrayList<>();
@@ -55,6 +77,9 @@ public class LibraryManagementSystem {
         }
     }
 
+    /**
+     * this method gets title and searches whole library to check if a book is in library or not
+     */
     public void searchBooksByTitle(String title) {
         List<Book> books = library.getAllBooks();
         List<Book> matchingBooks = new ArrayList<>();
@@ -74,4 +99,6 @@ public class LibraryManagementSystem {
             }
         }
     }
+
+
 }

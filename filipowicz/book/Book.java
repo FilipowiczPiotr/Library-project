@@ -1,4 +1,8 @@
 package filipowicz.book;
+
+/**
+ * a class representing a book with 3 fields - title, author and date of publication
+ */
 public class Book {
     String title;
     String author;
@@ -22,6 +26,9 @@ public class Book {
         return publicationDate;
     }
 
+    /**
+     * a method which returns information about a book
+     */
     @Override
     public String toString() {
         return "Title: " + title + ", Author: " + author + ", Publication Date: " + publicationDate;

@@ -3,8 +3,11 @@ import filipowicz.book.Book;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * a class representing a library - basically list of books. It is able to add books, remove books and show all books inside it
+ */
 class Library {
-    private List<Book> books;
+    List<Book> books;
 
     public Library() {
         this.books = new ArrayList<>();
